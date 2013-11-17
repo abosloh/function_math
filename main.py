@@ -1,4 +1,3 @@
-
 # if number x is odd return true else false
 def is_odd(x):
     if x%2!=0: return True
@@ -16,4 +15,9 @@ def is_composite(num):
     return False
 
 
-
+# return list of divisors of the number
+# print get_factors(28)
+# the output will be 
+# [1, 2, 4, 7, 14, 28]
+def get_factors(n):
+    return list(set(reduce(list.__add__, ([i, n//i] for i in range(1, int(n**0.5) + 1) if n % i == 0)   ) ))
